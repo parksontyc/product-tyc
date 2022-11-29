@@ -21,4 +21,4 @@ print(booking)
 # 寫入檔案
 with open('booking.csv', 'w') as f:
     for line in booking:
-        f.write(line)  # TypeError: write() argument must be str, not list
+        f.write(line[0] + ',' + line[1] + '\n')
