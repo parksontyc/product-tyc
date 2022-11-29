@@ -6,9 +6,12 @@
 booking = []
 while True:
     name = input('請輸入產品名稱:')
-    if name in ['Q', 'q']:
-        break
+    if name == '':
+        print('請輸入產品名稱/q離開')
+        name = input('請輸入產品名稱:')
+        if name == 'q':
+            break
+
     price = input('請輸入價格:')
-    p = [name, price]
-    booking.append(p)
+    booking.append([name, price])
 print(booking)
